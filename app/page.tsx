@@ -2,22 +2,22 @@
 
 import { useState } from "react";
 
-const realPhotos = {
-  hero: "https://images.openai.com/static-rsc-1/_ISyJ_ahR53DqfWrWVwIcK8zOV5h8SHP0S8GhgQ6W0j1F2Y6EL9R0qlkdzOZtUVhePbBEPTPAHNG8F5BRn0fAl65BcLIXwM_X0SyIc2QATQlXEzFrSJ6VDi8btT0QPRgrgg3wgf3UXikvfpfXZBwwK-LJ6YH9Ubhej0aBDd1ohg",
-  interior: "https://images.openai.com/static-rsc-1/Hq5QZ6hEk6TSNoXieM6x2SIqKQwOtAJqUvGzqe60k-ucvYdE3OdZ5up1bB-rczhQ4CnnB_QZOJIJmxpPSN74_heFEcE3Q9I1eppDGgWa_5tFdjLaCLLQ77sAJ0UHzmVgTgDa0AiXkktfztBgBIUxwz3xrAkl43SjoDy2C5B51bY",
-  food: "https://images.openai.com/static-rsc-1/Ae-5Zd6fLZcnpix-MLHeaw-RcQhbsAW2mwWgM0mE8T6zCL9Z3F4cqNOgZI0hF7_I-jvNb3JJWgLhaEqjcILrxW4ZzImjNz61wIetWD9PZOXU_K2QrzHqeYZKxu0yV6aQeRb6oKwNvmaecDwI7Xz-My5ol3QinPg83rV8EwNDVRE",
+const businessPhotos = {\n  featured: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2200&q=88",\n  atmosphere: "https://images.openai.com/static-rsc-1/slXRqc6Z6OPwlK7VgRPe0jlXnPUfQPvdK3y8r55hSaZbhzUVjyWFNHqyaMGdQ14Z5Maq5aRXQTtJlDZ7T_WxKzE_CAEK8CaHP_qkj75TQNfn66uuighF7FPs4Wpi5UE-WiXczbEGBJZDxWrqEF_euz4ArwDeVORLhDXb5guqgmk",\n};\n\nconst foodImages = {
+  ribs: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
+  bbq: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85",
+  burger: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85",
+  fish: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=85",
+  chicken: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1200&q=85",
+  pizza: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1200&q=85",
 };
 
 const menu = [
-  ["Nephew’s Pork Rib Plate", "Ribs served with two sides and bread.", "BBQ FAVORITE"],
-  ["Pork Rib Tip Plate", "Rib tips served with two sides and bread.", "HOUSE FAVORITE"],
-  ["Rib Tips & Chicken Combo", "A rib tips and chicken combo for a serious appetite.", "COMBO"],
-  ["Grilled Chicken Plate", "Grilled chicken served with two sides and bread.", "CLASSIC"],
-  ["Chicken and Dressing", "Scratch-made cornbread, chicken and homemade giblet gravy.", "COMFORT FOOD"],
-  ["Whiting Fry Basket", "Fried whiting served with fries and bread.", "FRIED FAVORITE"],
-  ["Catfish Fry Basket", "Fried catfish served with fries and bread.", "SEAFOOD"],
-  ["Pork Chop Fry Basket", "Fried pork chop served with fries and bread.", "FRIED FAVORITE"],
-  ["Slaw Dog", "Detroit-style beef hot link with baked beans and coleslaw.", "BAR GRILL"],
+  ["Nephew’s Pork Rib Plate", "Ribs served with two sides and bread.", foodImages.ribs, "BBQ FAVORITE"],
+  ["Rib Tips & Chicken", "A combo built for a serious appetite.", foodImages.bbq, "HOUSE PICK"],
+  ["Grilled Chicken Plate", "Seasoned grilled chicken with two sides and bread.", foodImages.chicken, "CLASSIC"],
+  ["Catfish Fry Basket", "Crisp Southern-style catfish with fries and bread.", foodImages.fish, "FRIED FAVORITE"],
+  ["Whiting Fry Basket", "Golden fried whiting with fries and bread.", foodImages.fish, "SEAFOOD"],
+  ["Nephews Burger", "A loaded burger for the table or the late-night craving.", foodImages.burger, "BAR GRILL"],
 ];
 
 export default function Home() {
@@ -89,15 +89,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="foodShowcase" aria-label="Real Nephews photos">
-        <div className="showcaseLarge" style={{ backgroundImage: `url(${realPhotos.hero})` }}>
+      <section className="foodShowcase" aria-label="Food photography">
+        <div className="showcaseLarge" style={{ backgroundImage: `url(${foodImages.ribs})` }}>
           <div className="photoOverlay"><span>01</span><strong>RIBS &amp; RIB TIPS</strong></div>
         </div>
         <div className="showcaseStack">
-          <div className="showcaseSmall" style={{ backgroundImage: `url(${realPhotos.food})` }}>
+          <div className="showcaseSmall" style={{ backgroundImage: `url(${foodImages.burger})` }}>
             <div className="photoOverlay"><span>02</span><strong>BURGERS</strong></div>
           </div>
-          <div className="showcaseSmall" style={{ backgroundImage: `url(${realPhotos.interior})` }}>
+          <div className="showcaseSmall" style={{ backgroundImage: `url(${foodImages.fish})` }}>
             <div className="photoOverlay"><span>03</span><strong>FRIED FAVORITES</strong></div>
           </div>
         </div>
@@ -110,20 +110,22 @@ export default function Home() {
             <h2>THE FOOD.</h2>
           </div>
           <div className="menuIntro">
-            <p>Real menu items pulled from Nephews' public online ordering menu. No stock food photos are attached to individual dishes unless the exact dish photo can be verified.</p>
+            <p>Built around dishes that show up on Nephews' current online ordering menus.</p>
             <a href="https://www.ubereats.com/store/nephews-bar-and-grill/oAAZtOxUT3-LpzLo5NqMTw" target="_blank" rel="noreferrer">Order online ↗</a>
           </div>
         </div>
 
         <div className="menuGrid">
-          {menu.map(([name, desc, tag], i) => (
+          {menu.map(([name, desc, image, tag], i) => (
             <article className="menuCard" key={name}>
-              <div className="menuNumber">{String(i + 1).padStart(2, "0")}</div>
+              <div className="menuImage" style={{ backgroundImage: `url(${image})` }}>
+                <span>{String(i + 1).padStart(2, "0")}</span>
+              </div>
               <div className="menuBody">
                 <div className="tag">{tag}</div>
                 <h3>{name}</h3>
                 <p>{desc}</p>
-                <a href="https://www.ubereats.com/store/nephews-bar-and-grill/oAAZtOxUT3-LpzLo5NqMTw" target="_blank" rel="noreferrer">View ordering menu <span>↗</span></a>
+                <a href="tel:+14238022753">Ask about it <span>→</span></a>
               </div>
             </article>
           ))}
@@ -148,14 +150,14 @@ export default function Home() {
 
       <section className="vibeSection">
         <div className="vibeCopy">
-          <div className="sectionKicker">REAL NEPHEWS PHOTOS</div>
+          <div className="sectionKicker">THE VIBE</div>
           <h2>GOOD PEOPLE.<br /><em>GOOD PLATES.</em></h2>
-          <p>These photos come from the Nephews Bar Grill business listing. Dish names stay separate from photography so the site never presents a stock image as a specific menu item.</p>
+          <p>Recent public listings describe Nephews as a relaxed, group-friendly Chattanooga bar and grill with food, drinks and sports. This section is designed to feel like walking through the door on a busy night.</p>
         </div>
         <div className="vibeGallery">
-          <div className="vibeImage tall" style={{ backgroundImage: `url(${realPhotos.food})` }} />
-          <div className="vibeImage" style={{ backgroundImage: `url(${realPhotos.interior})` }} />
-          <div className="vibeImage" style={{ backgroundImage: `url(${realPhotos.hero})` }} />
+          <div className="vibeImage tall" style={{ backgroundImage: `url(${foodImages.bbq})` }} />
+          <div className="vibeImage" style={{ backgroundImage: `url(${foodImages.chicken})` }} />
+          <div className="vibeImage" style={{ backgroundImage: `url(${foodImages.pizza})` }} />
         </div>
       </section>
 
