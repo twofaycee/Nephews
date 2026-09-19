@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const foodImages = {
+const businessPhotos = {\n  featured: "https://images.openai.com/static-rsc-1/Alw6rUtv9zU57RShmH7Ez6wkeEI17aqpkdrS6ZCI7Jwrsd31s2-FJAF-eXOoPvVp8YAGuQLsQQ5Q1c3ZlI0bpQ4Ekx0_RRZ0jeSN7_bufqKBm4fVv89-SVbQzO-VWt4M1yGZpA2WYBNJwBS-jLsQ3F9fd2tw1fkAXKsfK5cjIzQ",\n  atmosphere: "https://images.openai.com/static-rsc-1/slXRqc6Z6OPwlK7VgRPe0jlXnPUfQPvdK3y8r55hSaZbhzUVjyWFNHqyaMGdQ14Z5Maq5aRXQTtJlDZ7T_WxKzE_CAEK8CaHP_qkj75TQNfn66uuighF7FPs4Wpi5UE-WiXczbEGBJZDxWrqEF_euz4ArwDeVORLhDXb5guqgmk",\n};\n\nconst foodImages = {
   ribs: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
   bbq: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=85",
   burger: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85",
